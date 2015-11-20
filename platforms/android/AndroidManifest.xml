@@ -10,6 +10,18 @@
             </intent-filter>
         </activity>
         <activity android:name="me.apla.cordova.AppPreferencesActivity" />
+        <activity android:name="it.greenaddress.cordova.PINInputActivity" />
+        <receiver android:label="GreenAddress Wallet Balance" android:name="it.greenaddress.cordova.WalletBalanceWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/wallet_balance_widget" />
+        </receiver>
+        <activity android:name="it.greenaddress.cordova.SettingsActivity" android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
         <activity android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:exported="false" android:name="com.google.zxing.client.android.CaptureActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>
                 <action android:name="com.google.zxing.client.android.SCAN" />

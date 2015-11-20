@@ -75,6 +75,18 @@
                             "count": 1
                         },
                         {
+                            "xml": "<activity android:name=\"it.greenaddress.cordova.PINInputActivity\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<receiver android:label=\"GreenAddress Wallet Balance\" android:name=\"it.greenaddress.cordova.WalletBalanceWidgetProvider\"><intent-filter><action android:name=\"android.appwidget.action.APPWIDGET_UPDATE\" /></intent-filter><meta-data android:name=\"android.appwidget.provider\" android:resource=\"@xml/wallet_balance_widget\" /></receiver>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<activity android:name=\"it.greenaddress.cordova.SettingsActivity\" android:noHistory=\"true\"><intent-filter><action android:name=\"android.appwidget.action.APPWIDGET_CONFIGURE\" /></intent-filter></activity>",
+                            "count": 1
+                        },
+                        {
                             "xml": "<activity android:clearTaskOnLaunch=\"true\" android:configChanges=\"orientation|keyboardHidden\" android:exported=\"false\" android:name=\"com.google.zxing.client.android.CaptureActivity\" android:theme=\"@android:style/Theme.NoTitleBar.Fullscreen\" android:windowSoftInputMode=\"stateAlwaysHidden\"><intent-filter><action android:name=\"com.google.zxing.client.android.SCAN\" /><category android:name=\"android.intent.category.DEFAULT\" /></intent-filter></activity>",
                             "count": 1
                         },

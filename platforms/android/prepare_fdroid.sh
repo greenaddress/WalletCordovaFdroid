@@ -8,11 +8,15 @@ ln -s $PWD/CordovaLib/bin CordovaLib/ant-build
 ln -s $PWD/../../facebook-android-sdk-3.7/facebook/bin $PWD/../../facebook-android-sdk-3.7/facebook/ant-build
 cp -r ../../www/* assets/www
 cp -r platform_www/* assets/www
+mkdir -p it.greenaddress.cordova
+cp -r ../../plugins/it.greenaddress.cordova/facebook-android-sdk-3.7/facebook it.greenaddress.cordova/cordova-facebook
+mkdir -p it.greenaddress.cordova/cordova-facebook/bin
+ln -s `pwd`/it.greenaddress.cordova/cordova-facebook/bin `pwd`/it.greenaddress.cordova/cordova-facebook/ant-build
 
 cd scrypt
 patch -p1 < ../scrypt_Makefile.patch
 if [ `uname -m` = "x86_64" ]; then
-    export SYSTEM="darwin-x86_64"
+    export SYSTEM="linux-x86_64"
 else
     export SYSTEM="linux-x86"
 fi
